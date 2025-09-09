@@ -9,12 +9,12 @@ const directoryPath = 'public/images'
 
 // Set up storage for uploaded files
 const storage = multer.diskStorage({
-  destination(req, file, cb) {
+  destination(req, file, cb)  {
     cb(null, directoryPath) // Use shorthand
   },
-  filename(req, file, cb) {
+  filename(req, file, cb)  {
     cb(null, file.originalname) // Use shorthand
-  },
+  }
 }) // Trailing comma removed
 
 const upload = multer({ storage }) // Use shorthand
